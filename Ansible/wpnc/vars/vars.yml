@@ -1,0 +1,30 @@
+---
+#Variables WordPress
+wpDomain: "wp"
+wpIP: "127.0.0.1"
+wpDBName: "wpdb"
+wpDBUser: "wpdbu"
+wpDBPassword: "wpdbu"
+wpVirtualHostFile: "{{ wpDomain }}.conf"
+#Variables Nextcloud
+ncDomain: "nc"
+ncIP: "127.0.0.1"
+ncDBName: "ncdb"
+ncDBUser: "ncdbu"
+ncDBPassword: "ncdbu"
+ncVirtualHostFile: "{{ ncDomain }}.conf"
+
+
+# MySQL
+mysqlRootPassword: "root"
+
+# COMMON VARS
+lamp: [ 'apache2', 'mariadb-server', 'python3-pymysql', 'php', 'php-mysql', 'libapache2-mod-php' ]
+phpModules: [ 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlrpc', 'php-soap', 'php-intl', 'php-zip', 'php-imagick', 'php-gmp','php-bcmath','php-zip' ]
+commonNames: [ '{{wpDomain}}', '{{ncDomain}}', '{{wpDomain}}/CN={{ncDomain}}' ]
+
+# backend
+httpPort: "8080"
+
+# VSFTP
+vsftpdPass: "vsftp"
